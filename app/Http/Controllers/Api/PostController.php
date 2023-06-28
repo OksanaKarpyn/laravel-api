@@ -9,7 +9,8 @@ class PostController extends Controller
 {
     //
     public function index(){
-        $post = Project::all();
+       // $post = Project::with('category','tecnologies')->get();
+        $post = Project::with('category','tecnologies')->get();
         return response()->json([
             'success'=> true,
             'post'=> $post
