@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\PostController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\TecnologyController;
+use App\Http\Controllers\Api\LeadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,4 @@ use App\Http\Controllers\Api\TecnologyController;
 Route::get('/post',[PostController::class,'index']);
 Route::get('/categories',[CategoryController::class,'index']);
 Route::get('/tecnologies',[TecnologyController::class,'index']);
+Route::post('/contacts',[LeadController::class,'store']);
